@@ -65,4 +65,75 @@ http://127.0.0.1:8000/reset_password/--
 	
 }
 ---------------------------------------------------------------
+================================user=================================
+---------------------------http://127.0.0.1:8000/user/user_regisert/-------post cmd hitt---------------
+{
+	"email":"radhe@ggmail.com",
+	"password":"radhe",
+	"mobile":"6998963698"
 
+}
+-----------------------------------------------------------------------
+================================http://127.0.0.1:8000/user/user_login/---------post---
+{
+	"email":"radhe@ggmail.com",
+	"password":"radhe"
+}
+------------------------output--------------------
+{
+    "response": {
+        "access_token": "SOdwTPvR4iVfXpWuqY4cALdRHhKQM4",
+        "expires_in": 36000,
+        "token_type": "Bearer",
+        "refresh_token": "WPiqQykpHYLDNu0DeRu5VDmcM2qYYi",
+        "client_id": "5fVrLp63MfEgJsvAgLx5VcTyWScIpe4B2IObcbOS",
+        "client_secret": "ME6Y5ulZCBlRtLfiUSh9qiudtKAsKcKlXjm2X2uDDR6n9p1IiDQV8qO6imm8QyuiQvwFGOmRFhlZT0E7aXaAXNrzLkWcMG3gPbIh7ln5u903DiOAoIshZ9ztD3nOpKvb"
+    },
+    "message": true,
+    "status": 200
+}
+---------------------------------------------------------------------------
+=============================================================================================
+                              seller api
+=============================================================================================
+-------------------------------http://127.0.0.1:8000/seller/seller_registration/-----------post
+{
+	"email":"krishna9@gmail.com",
+	"password":"krishna",
+	"first_name":"krishna",
+	"middile_name":"kumar",
+	"last_name":"kashyap",
+	"designation":"python",
+	"business_of_name":"python tutorial",
+	"mobile_no":"9795019542",
+	"phone":"979501954",
+	"date_corporation":"2021-01-9"
+}
+------------out put--------
+{
+    "response": "Seller regisration Succesfull ",
+    "message": true,
+    "status": 200
+}
+-------------------------------------------------------------------------------
+=======================================seller login=================================
+--------------http://127.0.0.1:8000/seller/seller_login/--------post cmd
+
+{
+	"email":"krishna@gmail.com",
+	"password":"krishna"
+}
+------------------------------------------------------------------
+-------------------------http://127.0.0.1:8000/seller/seller_login/ --  by phone number-----post cmd
+
+
+{
+	"phone":"6393967773"
+}
+-------------------------output---------------
+
+{
+    "response": "your otp is expired",
+    "message": false,
+    "status": 200
+}

@@ -38,9 +38,12 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'rest_framework',
+    'seller',
+    'marketapp',
+    'user',
     'oauth2_provider',
-    'authentication',
     'django_rest_passwordreset',
+  
 ]
 
 MIDDLEWARE = [
@@ -79,8 +82,13 @@ WSGI_APPLICATION = 'marketplace.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'markdb',
+        'USER': 'mark',
+        'PASSWORD': 'mark',
+        'HOST': 'localhost',
+        'PORT': '',    
+        
     }
 }
 
@@ -125,7 +133,7 @@ STATIC_URL = '/static/'
 
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
-AUTH_USER_MODEL = 'authentication.MyUser'
+AUTH_USER_MODEL = 'marketapp.MyUser'
 REST_FRAMEWORK = {
 
     'DEFAULT_AUTHENTICATION_CLASSES': (

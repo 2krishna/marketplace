@@ -18,6 +18,8 @@ from django.urls import path,include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('auth/', include('authentication.urls')),
+    path('auth/', include('marketapp.urls')),
+    path('user/', include('user.urls')),
+    path('seller/', include('seller.urls')),
     path('reset_password/',include('django_rest_passwordreset.urls', namespace='password_reset')),
 ]
